@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premium Cinema — Elegant Dark Theme</title>
+
+  <!-- BOOTSTRAP & FONTAWESOME CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- MY CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fa-solid fa-film fa-lg"></i><span class="fw-bold ms-1">Premium Cinema</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#movies">Movies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="container text-center">
+    <h1 class="display-4 reveal">The ultimate cinematic experience — feel every frame</h1>
+    <p class="lead reveal">Luxury seats • Dolby Atmos sound • 4K projection • Premium snacks</p>
+
+    <div class="d-flex justify-content-center gap-2 reveal">
+      <a href="#movies" class="btn btn-lg btn-danger me-2"><i class="fa-solid fa-ticket"></i> Book Tickets</a>
+      <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#trailerModal">
+        <i class="fa-solid fa-play"></i> Watch Trailer
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MOVIES -->
+<section id="movies" class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold">Now Showing</h2>
+      <small class="white">Updated weekly</small>
+    </div>
+
+    <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+              <div class="card movie-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1400&q=80" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Action: Nightfall</h5>
+                  <p class="movie-meta mb-2">Duration: 2h 10m • Genre: Action, Thriller</p>
+                  <p class="card-text">A high-octane action thriller with heart-pounding chase sequences and cinematic scale.</p>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#trailerModal" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">Watch Trailer</button>
+                    <a href="#" class="btn btn-outline-light">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+              <div class="card movie-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1400&q=80" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Sci-Fi: Beyond Stars</h5>
+                  <p class="movie-meta mb-2">Duration: 2h 5m • Genre: Sci-Fi, Adventure</p>
+                  <p class="card-text">A visually stunning journey across galaxies with emotional storytelling.</p>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#trailerModal" data-video="https://www.youtube.com/embed/ScMzIvxBSi4">Watch Trailer</button>
+                    <a href="#" class="btn btn-outline-light">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+              <div class="card movie-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=1400&q=80" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Drama: The Last Letter</h5>
+                  <p class="movie-meta mb-2">Duration: 1h 58m • Genre: Drama, Romance</p>
+                  <p class="card-text">A touching drama about lost time and second chances, beautifully shot.</p>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#trailerModal" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">Watch Trailer</button>
+                    <a href="#" class="btn btn-outline-light">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="py-5">
+  <div class="container">
+    <h3 class="fw-bold mb-3">Why choose us</h3>
+    <div class="row g-3">
+      <div class="col-md-4 reveal">
+        <div class="feature p-3 h-100">
+          <h5><i class="fa-solid fa-headphones-simple me-2 text-danger"></i> Dolby Atmos</h5>
+          <p class="text-white">Immersive multi-dimensional audio for realistic sound.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal">
+        <div class="feature p-3 h-100">
+          <h5><i class="fa-solid fa-tv me-2 text-danger"></i> 4K Projection</h5>
+          <p class="text-white">Crisp, color-accurate projection on large screens.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal">
+        <div class="feature p-3 h-100">
+          <h5><i class="fa-solid fa-couch me-2 text-danger"></i> Luxury Seating</h5>
+          <p class="text-white">Spacious reclining seats and premium legroom.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-5 bg-dark text-light">
+  <div class="container">
+    <h3 class="fw-bold mb-4">What our visitors say</h3>
+
+    <div id="testiCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card p-4 bg-opacity">
+            <p class="quote">"The sound system literally gave me goosebumps — every explosion hit so cleanly. Seats were super comfy."</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://i.pravatar.cc/60?img=32" class="rounded-circle me-3">
+              <div>
+                <strong class="text-white">Rina P.</strong>
+                <div class="text-white small">Movie lover • 4 visits</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card p-4 bg-opacity">
+            <p class="quote">"Amazing projection and friendly staff. Perfect date-night spot."</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://i.pravatar.cc/60?img=12" class="rounded-circle me-3">
+              <div>
+                <strong class="text-white">Bayu K.</strong>
+                <div class="text-white small">Frequent visitor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#testiCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#testiCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h3 class="fw-bold mb-3">Contact & Booking</h3>
+    <div class="row">
+
+      <div class="col-lg-6 reveal">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4"></textarea>
+          </div>
+
+          <button class="btn btn-danger">Send Message</button>
+        </form>
+      </div>
+
+      <div class="col-lg-6 reveal">
+        <div class="p-3 info-box">
+          <h5>Opening Hours</h5>
+          <p>Mon - Thu: 10:00 - 22:00</p>
+          <p>Fri - Sun: 10:00 - 24:00</p>
+
+          <h5 class="mt-3">Location</h5>
+          <p>Jl. Cinema No. 88, Jakarta — Near Grand Mall</p>
+
+          <h5 class="mt-3">Contact</h5>
+          <p><i class="fa-solid fa-phone me-2"></i>+62 812-3456-7890</p>
+          <p><i class="fa-solid fa-envelope me-2"></i>support@premiumcinema.id</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Premium Cinema</h5>
+        <p class="small white">Elevating movie nights with premium tech & service.</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#movies">Now Showing</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Follow Us</h6>
+        <a href="#" class="me-2"><i class="fa-brands fa-instagram fa-lg"></i></a>
+        <a href="#" class="me-2"><i class="fa-brands fa-facebook fa-lg"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center mt-3 small white">©️ 2025 Premium Cinema • All rights reserved</div>
+  </div>
+</footer>
+
+<!-- TRAILER MODAL -->
+<div class="modal fade" id="trailerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Trailer</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="trailerFrame" src="" allowfullscreen allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- MY JS -->
+<script src="assets/script.js"></script>
+
+</body>
+</html>
